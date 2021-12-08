@@ -1,0 +1,12 @@
+//Aritmeticki shift u lijevo je ekvivalentan mnozenju s 2^n gdje je n broj shiftova. Dakle shiftat cemo broj 2 puta u lijevo da bi ga pomnozili s 4
+
+CHIP Mult4 {
+
+	IN in[16];
+	OUT out[16];
+
+	PARTS:
+	BitShiftL(in = in, out = out1);
+	BitShiftL(in = out1, out = out);
+
+}
