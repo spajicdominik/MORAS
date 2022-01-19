@@ -1,0 +1,19 @@
+function mult 2
+	push constant 0
+	pop local 0
+	push constant 1
+	pop local 1
+label LOOP
+	push local 1
+	push argument 1
+	if-goto END
+	push local 0
+	push argument 0
+	pop local 0
+	push local 1
+	push constant 1
+	pop local 1
+	goto LOOP
+label END
+	push local 0
+	return
